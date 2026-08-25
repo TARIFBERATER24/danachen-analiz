@@ -122,7 +122,7 @@ export default function HomePage() {
         <section className="mx-auto w-full max-w-6xl px-5 py-16 md:px-8 lg:py-20">
           <div className="flex flex-col items-start gap-5 rounded-2xl border border-border bg-card p-8 shadow-card sm:p-10">
             <h2 className="max-w-xl text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
-              Провери какво е възможно да си върнеш за 2025 г.
+              Провери кои данни и формуляри са релевантни за 2025 г.
             </h2>
             <p className="max-w-xl leading-relaxed text-muted-foreground text-pretty">
               Безплатна първоначална проверка, без ангажимент. На български, стъпка по стъпка.
@@ -149,10 +149,11 @@ export default function HomePage() {
           </div>
           <LegalNote className="max-w-2xl" />
           <p className="text-xs text-muted-foreground">
-            Прототип за валидиране на продукта. Данните не се запазват.
+            V1 пази отговорите и документите локално на твоето устройство. Не се извършва електронно подаване към Finanzamt.
           </p>
         </div>
       </footer>
     </div>
   )
 }
+
