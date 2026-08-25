@@ -16,8 +16,7 @@ export function TaxAnalysisHero() {
               Данъчен анализ
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-foreground/80 text-pretty sm:text-xl">
-              Разбери за няколко минути колко пари е възможно да си върнеш след годишната данъчна
-              декларация.
+              Подготви за няколко минути данните си за годишната данъчна декларация.
             </p>
             <p className="max-w-xl leading-relaxed text-muted-foreground text-pretty">
               Отговори на няколко лесни въпроса и виж кои разходи и данъчни облекчения може да са
@@ -49,3 +48,4 @@ export function TaxAnalysisHero() {
     </section>
   )
 }
+
