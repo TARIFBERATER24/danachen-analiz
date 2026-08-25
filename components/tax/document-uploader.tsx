@@ -22,7 +22,7 @@ export function DocumentUploader({
 }: {
   status: UploadStatus
   document: UploadedDocument | null
-  onFile: (file: UploadedDocument) => void
+  onFile: (file: File) => void
   onRemove: () => void
 }) {
   const inputRef = useRef<HTMLInputElement>(null)
@@ -37,8 +37,12 @@ export function DocumentUploader({
       setError('Поддържат се само файлове във формат PDF, JPG или PNG.')
       return
     }
+    if (file.size > 10 * 1024 * 1024) {
+      setError('Файлът е по-голям от 10 MB. Избери по-малък файл.')
+      return
+    }
     setError(null)
-    onFile({ name: file.name, size: file.size })
+    onFile(file)
   }
 
   if (status === 'empty') {
@@ -91,7 +95,7 @@ export function DocumentUploader({
         )}
         <p className="flex items-center gap-2 text-xs text-muted-foreground">
           <Lock className="size-3.5" aria-hidden="true" />
-          Прототип — файловете не се изпращат към сървър.
+          Файлът се пази локално на това устройство и не се обработва с OCR.
         </p>
       </div>
     )
@@ -157,3 +161,4 @@ export function DocumentUploader({
     </div>
   )
 }
+
