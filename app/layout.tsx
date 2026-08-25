@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Данъчен анализ — Mein Deutschland',
   description:
-    'Разбери за няколко минути колко пари е възможно да си върнеш след годишната данъчна декларация в Германия. На български. Без сложни немски формуляри.',
+    'Подготви данните за Einkommensteuererklärung 2025 в Германия. На български, стъпка по стъпка, без електронно подаване.',
   generator: 'v0.app',
   icons: {
     icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
@@ -47,3 +47,4 @@ export default function RootLayout({
     </html>
   )
 }
+
