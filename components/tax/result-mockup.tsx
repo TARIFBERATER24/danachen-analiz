@@ -24,18 +24,18 @@ export function ResultMockup() {
                   <Check className="size-3 text-success" strokeWidth={3} aria-hidden="true" />
                 </span>
                 <p className="text-[0.78rem] leading-snug font-medium text-foreground">
-                  Има признаци, че подаването може да си струва
+                  Данните ти се подреждат за проверка
                 </p>
               </div>
             </div>
 
             <div className="rounded-xl border border-border bg-secondary p-3.5">
               <div className="flex items-center justify-between">
-                <p className="text-[0.7rem] font-medium text-muted-foreground">Потенциал за възстановяване</p>
+                <p className="text-[0.7rem] font-medium text-muted-foreground">Готовност на случая</p>
                 <Lock className="size-3 text-muted-foreground" aria-hidden="true" />
               </div>
               <p className="mt-1.5 font-mono text-lg tracking-tight text-foreground/40">•  •  •  €</p>
-              <p className="mt-1 text-[0.62rem] text-muted-foreground">Изчислението изисква още данни</p>
+              <p className="mt-1 text-[0.62rem] text-muted-foreground">Проверката изисква потвърдени данни</p>
             </div>
 
             <div className="space-y-2">
@@ -74,3 +74,4 @@ export function ResultMockup() {
     </div>
   )
 }
+
