@@ -97,7 +97,6 @@ export default function HomePage() {
                 Показваме оригиналното понятие, за да го разпознаваш в документите си, и веднага до
                 него — какво означава на практика.
               </p>
-              <LegalNote className="max-w-md" />
             </div>
             <ul className="grid gap-3 sm:grid-cols-2">
               {AREAS.map((area) => (

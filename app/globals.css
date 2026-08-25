@@ -93,6 +93,14 @@
     background: var(--accent);
     color: var(--accent-foreground);
   }
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    appearance: textfield;
+  }
 }
 
 @utility tabular {

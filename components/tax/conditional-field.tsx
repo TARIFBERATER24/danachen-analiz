@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import { Minus, Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -20,6 +21,11 @@ export function Counter({
   label: string
 }) {
   const current = value ?? min
+
+  useEffect(() => {
+    if (value === undefined) onChange(min)
+  }, [min, onChange, value])
+
   return (
     <div className="flex items-center gap-5 rounded-xl border border-border bg-card p-4">
       <button
@@ -33,14 +39,14 @@ export function Counter({
       </button>
       <div className="flex flex-1 flex-col items-center">
         <span className="font-mono text-3xl font-semibold tabular" aria-live="polite">
-          {value ?? '—'}
+          {current}
         </span>
         <span className="text-sm text-muted-foreground">{label}</span>
       </div>
       <button
         type="button"
-        onClick={() => onChange(Math.min(max, (value ?? min - 1) + 1))}
-        disabled={current >= max && value !== undefined}
+        onClick={() => onChange(Math.min(max, current + 1))}
+        disabled={current >= max}
         aria-label="Увеличи"
         className="flex size-12 items-center justify-center rounded-xl border border-border bg-background transition-colors outline-none hover:bg-muted focus-visible:ring-3 focus-visible:ring-ring/40 disabled:opacity-40"
       >
